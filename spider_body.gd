@@ -23,7 +23,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if forwards == true:
 		var movement_vector = get_global_mouse_position() - minimum_node.position
-		minimum_node.position += (movement_vector.normalized()) * 5
+		minimum_node.position += (movement_vector.normalized()) * minimum_node.position.distance_to(get_global_mouse_position()) * 2 * delta
 	else:
 		find_minmax_node()
 		maximum_node.global_position = get_global_mouse_position()

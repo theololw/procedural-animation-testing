@@ -24,3 +24,7 @@ func _on_testing_sum_physics_pressed() -> void:
 
 func _on_spider_pressed() -> void:
 	get_tree().change_scene_to_file("res://spider.tscn")
+
+
+func _on_grass_thingier_pressed() -> void:
+	get_tree().change_scene_to_file("res://rainworld_grassthingier.tscn")
