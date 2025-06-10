@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://s3ynh30re55"]
+
+[ext_resource type="Script" uid="uid://dj0rdekxd617f" path="res://monster_kelp.gd" id="1_1fgvl"]
+[ext_resource type="PackedScene" uid="uid://ddwfbeaelt1l8" path="res://back_button.tscn" id="2_ydp3o"]
+
+[node name="rainworld_grassthingier" type="Node2D"]
+
+[node name="Group of nodes" type="Node2D" parent="."]
+script = ExtResource("1_1fgvl")
+
+[node name="Node1" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(128, 256)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -8, 16, -8, 16, 8, -16, 8)
+
+[node name="Node2" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(192, 256)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node2"]
+color = Color(0.521141, 0.521141, 0.521141, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node3" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(240, 240)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node4" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(240, 192)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node4"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node5" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(344, 192)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node5"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node6" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(400, 232)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node6"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node7" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(384, 264)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node7"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node8" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(384, 264)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node8"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node9" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(384, 264)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node9"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node10" type="Node2D" parent="Group of nodes" groups=["segment"]]
+position = Vector2(384, 264)
+
+[node name="Polygon2D" type="Polygon2D" parent="Group of nodes/Node10"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+autostart = true
+
+[node name="back_button" parent="." instance=ExtResource("2_ydp3o")]
+position = Vector2(1016, 560)
+
+[connection signal="timeout" from="Timer" to="Group of nodes" method="_on_timer_timeout"]

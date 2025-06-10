@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckp061dn2kuxi"]
+
+[ext_resource type="PackedScene" uid="uid://cfsuddpfe76ei" path="res://three_nodes.tscn" id="1_rupst"]
+
+[node name="playground" type="Node2D"]
+
+[node name="Group of nodes" parent="." instance=ExtResource("1_rupst")]

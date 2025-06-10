@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://xodkraty6hal"]
+
+[ext_resource type="Script" uid="uid://r0wl8ouhh0a4" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://ddwfbeaelt1l8" path="res://back_button.tscn" id="2_0xm2m"]
+
+[node name="two_nodes" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Node_A" type="Node2D" parent="."]
+position = Vector2(544, 320)
+
+[node name="Polygon2D" type="Polygon2D" parent="Node_A"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Node_B" type="Node2D" parent="."]
+position = Vector2(544, 320)
+
+[node name="Polygon2D" type="Polygon2D" parent="Node_B"]
+position = Vector2(-16, -8)
+polygon = PackedVector2Array(8, 0, 24, 0, 24, 16, 8, 16)
+
+[node name="back_button" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(1016, 560)

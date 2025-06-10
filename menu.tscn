@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://bie8c867yxcak"]
+
+[ext_resource type="Script" uid="uid://dtm3r317vm7xm" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://lhmninbrnpth" path="res://img/Skärmbild 2025-06-10 193708.png" id="2_l48gv"]
+[ext_resource type="Texture2D" uid="uid://b1vnxcnafjswg" path="res://img/Skärmbild 2025-06-10 193742.png" id="3_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://cm0rkx1wwdii6" path="res://img/Skärmbild 2025-06-10 193606.png" id="4_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://dvu0h556snbn0" path="res://img/Skärmbild 2025-06-10 193522.png" id="5_nrnbx"]
+[ext_resource type="Texture2D" uid="uid://ch4hj4qyalepw" path="res://img/Skärmbild 2025-06-10 193656.png" id="6_iqepy"]
+[ext_resource type="Texture2D" uid="uid://bp0wwdyj2flhl" path="res://img/Skärmbild 2025-06-10 220554.png" id="7_ecwwl"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_lti8b")
+
+[node name="main" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 224.0
+offset_right = 288.0
+offset_bottom = 288.0
+text = "distance constraint"
+
+[node name="Skärmbild2025-06-10193708" type="Sprite2D" parent="main"]
+position = Vector2(96, -88)
+texture = ExtResource("2_l48gv")
+
+[node name="three_nodes" type="Button" parent="."]
+offset_left = 352.0
+offset_top = 224.0
+offset_right = 544.0
+offset_bottom = 288.0
+text = "chained constraints"
+
+[node name="Skärmbild2025-06-10193742" type="Sprite2D" parent="three_nodes"]
+position = Vector2(96, -115.75)
+scale = Vector2(0.449649, 0.960733)
+texture = ExtResource("3_ecwwl")
+
+[node name="leg" type="Button" parent="."]
+offset_left = 608.0
+offset_top = 224.0
+offset_right = 800.0
+offset_bottom = 286.0
+text = "spider dog"
+
+[node name="Skärmbild2025-06-10193606" type="Sprite2D" parent="leg"]
+position = Vector2(92.625, -112)
+scale = Vector2(0.552115, 0.551724)
+texture = ExtResource("4_kk3ma")
+
+[node name="lizard" type="Button" parent="."]
+offset_left = 864.0
+offset_top = 224.0
+offset_right = 1056.0
+offset_bottom = 286.0
+text = "lizard"
+
+[node name="Skärmbild2025-06-10193522" type="Sprite2D" parent="lizard"]
+position = Vector2(97.75, -97)
+scale = Vector2(0.335409, 0.381579)
+texture = ExtResource("5_nrnbx")
+
+[node name="testing_sum_physics" type="Button" parent="."]
+offset_left = 360.0
+offset_top = 544.0
+offset_right = 552.0
+offset_bottom = 608.0
+text = "physics nodes"
+
+[node name="Skärmbild2025-06-10193656" type="Sprite2D" parent="testing_sum_physics"]
+position = Vector2(96, -84)
+scale = Vector2(0.5, 0.43804)
+texture = ExtResource("6_iqepy")
+
+[node name="spider" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 544.0
+offset_right = 288.0
+offset_bottom = 608.0
+text = "physics nodes"
+
+[node name="Skärmbild2025-06-10220554" type="Sprite2D" parent="spider"]
+position = Vector2(96, -88)
+scale = Vector2(0.657143, 0.646789)
+texture = ExtResource("7_ecwwl")
+
+[connection signal="pressed" from="main" to="." method="_on_main_pressed"]
+[connection signal="pressed" from="three_nodes" to="." method="_on_three_nodes_pressed"]
+[connection signal="pressed" from="leg" to="." method="_on_leg_pressed"]
+[connection signal="pressed" from="lizard" to="." method="_on_lizard_pressed"]
+[connection signal="pressed" from="testing_sum_physics" to="." method="_on_testing_sum_physics_pressed"]
+[connection signal="pressed" from="spider" to="." method="_on_spider_pressed"]

@@ -1,0 +1,270 @@
+[gd_scene load_steps=4 format=3 uid="uid://5p1sjsgah2kc"]
+
+[ext_resource type="Script" uid="uid://c53wnd4ol8oli" path="res://dog_code.gd" id="1_onwxs"]
+[ext_resource type="PackedScene" uid="uid://ddwfbeaelt1l8" path="res://back_button.tscn" id="2_q16ya"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_onwxs"]
+
+[node name="leg" type="Node2D"]
+
+[node name="leg" type="Node2D" parent="."]
+script = ExtResource("1_onwxs")
+
+[node name="node1" type="Node2D" parent="leg" groups=["segment"]]
+position = Vector2(384, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg/node1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node2" type="Node2D" parent="leg" groups=["segment"]]
+position = Vector2(448, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg/node2"]
+color = Color(0.521141, 0.521141, 0.521141, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node3" type="Node2D" parent="leg" groups=["segment"]]
+position = Vector2(512, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg/node3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="body" type="Node2D" parent="leg"]
+position = Vector2(576, 352)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="leg/body"]
+z_index = 2
+position = Vector2(0, 55.5663)
+scale = Vector2(56.8675, 112.434)
+mesh = SubResource("CapsuleMesh_onwxs")
+
+[node name="leg_anchor" type="Node2D" parent="leg/body"]
+position = Vector2(-24, 0)
+
+[node name="foot_placement" type="Node2D" parent="leg/body"]
+position = Vector2(-88, -72)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg/body"]
+z_index = 2
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -24, -16, -16, -8, -16, -8, -24)
+
+[node name="Polygon2D2" type="Polygon2D" parent="leg/body"]
+z_index = 2
+position = Vector2(24, 0)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -24, -16, -16, -8, -16, -8, -24)
+
+[node name="Polygon2D3" type="Polygon2D" parent="leg/body"]
+z_index = 2
+position = Vector2(16, -24)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-16, -24, -24, -16, -8, -16, -16, -24)
+
+[node name="Timer" type="Timer" parent="leg"]
+wait_time = 0.01
+autostart = true
+
+[node name="Line2D" type="Line2D" parent="leg"]
+points = PackedVector2Array(-40, -88, 80, 56, 120, 152)
+
+[node name="leg2" type="Node2D" parent="."]
+script = ExtResource("1_onwxs")
+
+[node name="node1" type="Node2D" parent="leg2" groups=["segment"]]
+position = Vector2(384, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg2/node1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node2" type="Node2D" parent="leg2" groups=["segment"]]
+position = Vector2(448, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg2/node2"]
+color = Color(0.521141, 0.521141, 0.521141, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node3" type="Node2D" parent="leg2" groups=["segment"]]
+position = Vector2(512, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg2/node3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="body" type="Node2D" parent="leg2"]
+position = Vector2(576, 352)
+
+[node name="leg_anchor" type="Node2D" parent="leg2/body"]
+position = Vector2(-24, 136)
+
+[node name="foot_placement" type="Node2D" parent="leg2/body"]
+position = Vector2(-88, 88)
+
+[node name="Timer" type="Timer" parent="leg2"]
+wait_time = 0.01
+autostart = true
+
+[node name="Line2D" type="Line2D" parent="leg2"]
+
+[node name="leg6" type="Node2D" parent="."]
+script = ExtResource("1_onwxs")
+
+[node name="node1" type="Node2D" parent="leg6" groups=["segment"]]
+position = Vector2(384, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg6/node1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node2" type="Node2D" parent="leg6" groups=["segment"]]
+position = Vector2(448, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg6/node2"]
+color = Color(0.521141, 0.521141, 0.521141, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node3" type="Node2D" parent="leg6" groups=["segment"]]
+position = Vector2(512, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg6/node3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="body" type="Node2D" parent="leg6"]
+position = Vector2(576, 352)
+
+[node name="leg_anchor" type="Node2D" parent="leg6/body"]
+position = Vector2(-24, 64)
+
+[node name="foot_placement" type="Node2D" parent="leg6/body"]
+position = Vector2(-104, 16)
+
+[node name="Timer" type="Timer" parent="leg6"]
+wait_time = 0.01
+autostart = true
+
+[node name="Line2D" type="Line2D" parent="leg6"]
+
+[node name="leg3" type="Node2D" parent="."]
+script = ExtResource("1_onwxs")
+
+[node name="node1" type="Node2D" parent="leg3" groups=["segment"]]
+position = Vector2(384, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg3/node1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node2" type="Node2D" parent="leg3" groups=["segment"]]
+position = Vector2(448, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg3/node2"]
+color = Color(0.521141, 0.521141, 0.521141, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node3" type="Node2D" parent="leg3" groups=["segment"]]
+position = Vector2(512, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg3/node3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="body" type="Node2D" parent="leg3"]
+position = Vector2(576, 352)
+
+[node name="leg_anchor" type="Node2D" parent="leg3/body"]
+position = Vector2(24, 0)
+
+[node name="foot_placement" type="Node2D" parent="leg3/body"]
+position = Vector2(80, -72)
+
+[node name="Timer" type="Timer" parent="leg3"]
+wait_time = 0.01
+autostart = true
+
+[node name="Line2D" type="Line2D" parent="leg3"]
+
+[node name="leg4" type="Node2D" parent="."]
+script = ExtResource("1_onwxs")
+
+[node name="node1" type="Node2D" parent="leg4" groups=["segment"]]
+position = Vector2(384, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg4/node1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node2" type="Node2D" parent="leg4" groups=["segment"]]
+position = Vector2(448, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg4/node2"]
+color = Color(0.521141, 0.521141, 0.521141, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node3" type="Node2D" parent="leg4" groups=["segment"]]
+position = Vector2(512, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg4/node3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="body" type="Node2D" parent="leg4"]
+position = Vector2(576, 352)
+
+[node name="leg_anchor" type="Node2D" parent="leg4/body"]
+position = Vector2(24, 136)
+
+[node name="foot_placement" type="Node2D" parent="leg4/body"]
+position = Vector2(88, 88)
+
+[node name="Timer" type="Timer" parent="leg4"]
+wait_time = 0.01
+autostart = true
+
+[node name="Line2D" type="Line2D" parent="leg4"]
+
+[node name="leg5" type="Node2D" parent="."]
+script = ExtResource("1_onwxs")
+
+[node name="node1" type="Node2D" parent="leg5" groups=["segment"]]
+position = Vector2(384, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg5/node1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node2" type="Node2D" parent="leg5" groups=["segment"]]
+position = Vector2(448, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg5/node2"]
+color = Color(0.521141, 0.521141, 0.521141, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="node3" type="Node2D" parent="leg5" groups=["segment"]]
+position = Vector2(512, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="leg5/node3"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="body" type="Node2D" parent="leg5"]
+position = Vector2(576, 352)
+
+[node name="leg_anchor" type="Node2D" parent="leg5/body"]
+position = Vector2(24, 64)
+
+[node name="foot_placement" type="Node2D" parent="leg5/body"]
+position = Vector2(104, 16)
+
+[node name="Timer" type="Timer" parent="leg5"]
+wait_time = 0.01
+autostart = true
+
+[node name="Line2D" type="Line2D" parent="leg5"]
+
+[node name="back_button" parent="." instance=ExtResource("2_q16ya")]
+position = Vector2(1016, 560)
+
+[connection signal="timeout" from="leg/Timer" to="leg" method="_on_timer_timeout"]
+[connection signal="timeout" from="leg2/Timer" to="leg2" method="_on_timer_timeout"]
+[connection signal="timeout" from="leg6/Timer" to="leg6" method="_on_timer_timeout"]
+[connection signal="timeout" from="leg3/Timer" to="leg3" method="_on_timer_timeout"]
+[connection signal="timeout" from="leg4/Timer" to="leg4" method="_on_timer_timeout"]
+[connection signal="timeout" from="leg5/Timer" to="leg5" method="_on_timer_timeout"]
